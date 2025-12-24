@@ -8,44 +8,22 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
-      max-width: 900px;
+      max-width: 950px;
       margin: 40px auto;
       padding: 0 20px;
       color: #111;
     }
-    h1, h2, h3 {
-      line-height: 1.3;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 5px;
-    }
-    .subtitle {
-      color: #555;
-      margin-bottom: 20px;
-    }
-    a {
-      color: #0b57d0;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .links a {
-      margin-right: 12px;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 30px 0;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    .section {
-      margin-bottom: 28px;
-    }
+    h1, h2, h3 { line-height: 1.3; }
+    h1 { font-size: 32px; margin-bottom: 6px; }
+    .subtitle { color: #555; margin-bottom: 14px; }
+    a { color: #0b57d0; text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+    .links a { margin-right: 12px; }
+    hr { border: none; border-top: 1px solid #ddd; margin: 26px 0; }
+    ul { margin-left: 20px; }
+    ol { margin-left: 22px; }
+    li { margin: 8px 0; }
+    .section { margin-bottom: 28px; }
     .footer {
       border-top: 1px solid #ddd;
       margin-top: 40px;
@@ -53,20 +31,52 @@
       font-size: 14px;
       color: #666;
     }
+    .hero {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid #e6e6e6;
+    }
+    .note {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: #444;
+      font-size: 14px;
+    }
+    @media (max-width: 560px) {
+      .hero { grid-template-columns: 1fr; }
+      .avatar { width: 110px; height: 110px; }
+    }
   </style>
 </head>
 <body>
 
-  <h1>Bitewulign Mekonnen, PhD</h1>
-  <div class="subtitle">
-    Data Scientist | Machine Learning & Deep Learning | Computer Vision | Signal & Bio‑image Processing<br>
-    Toronto, ON, Canada
-  </div>
+  <div class="hero">
+    <!-- Put bitewulign.jpg in the same folder as this index.html in your GitHub Pages repo -->
+    <img class="avatar" src="bitewulign.jpg" alt="Bitewulign Mekonnen portrait" />
+    <div>
+      <h1>Bitewulign Mekonnen, PhD</h1>
+      <div class="subtitle">
+        Data Scientist | Machine Learning & Deep Learning | Computer Vision | Signal &amp; Bio-image Processing<br>
+        Toronto, ON, Canada
+      </div>
 
-  <div class="links">
-    <a href="https://www.linkedin.com/in/bitewulign-mekonnen/">LinkedIn</a>
-    <a href="https://github.com/bitewulign">GitHub</a>
-    <a href="https://orcid.org/0000-0003-0962-5392">ORCID</a>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/bitewulign-mekonnen/">LinkedIn</a>
+        <a href="https://github.com/bitewulign">GitHub</a>
+        <a href="https://orcid.org/0000-0003-0962-5392">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=SHPCjakAAAAJ&hl=en">Google Scholar</a>
+      </div>
+    </div>
   </div>
 
   <hr>
@@ -80,20 +90,20 @@
       biomedical signal processing.
     </p>
     <p>
-      I specialize in building end‑to‑end data science solutions, from data preprocessing and
+      I specialize in building end-to-end data science solutions, from data preprocessing and
       exploratory analysis to model development, evaluation, and deployment. I value clarity,
-      reproducibility, and real‑world impact in every project.
+      reproducibility, and real-world impact in every project.
     </p>
   </div>
 
   <div class="section">
     <h2>Core Expertise</h2>
     <ul>
-      <li>Machine Learning & Deep Learning</li>
-      <li>Computer Vision & Medical Imaging</li>
-      <li>Signal Processing & Time‑Series Analysis (PPG, physiological signals)</li>
-      <li>Statistical Modeling & Data Analysis</li>
-      <li>Data Visualization & Insight Communication</li>
+      <li>Machine Learning &amp; Deep Learning</li>
+      <li>Computer Vision &amp; Medical Imaging</li>
+      <li>Signal Processing &amp; Time-Series Analysis (PPG, physiological signals)</li>
+      <li>Statistical Modeling &amp; Data Analysis</li>
+      <li>Data Visualization &amp; Insight Communication</li>
     </ul>
   </div>
 
@@ -102,18 +112,18 @@
     <ul>
       <li>
         <strong>Cuffless Blood Pressure Estimation Using PPG</strong><br>
-        Developed machine learning and deep learning models for long‑term, non‑invasive blood
+        Developed machine learning and deep learning models for long-term, non-invasive blood
         pressure estimation using photoplethysmography signals.
       </li>
       <li>
-        <strong>Medical Image Analysis & Computer Vision</strong><br>
+        <strong>Medical Image Analysis &amp; Computer Vision</strong><br>
         Designed and evaluated computer vision pipelines for biomedical imaging applications
         using deep neural networks.
       </li>
       <li>
-        <strong>Healthcare Data Analytics & Visualization</strong><br>
+        <strong>Healthcare Data Analytics &amp; Visualization</strong><br>
         Built analytical workflows and dashboards to extract insights from clinical and
-        population‑level health datasets.
+        population-level health datasets.
       </li>
     </ul>
   </div>
@@ -122,20 +132,115 @@
     <h2>Technical Skills</h2>
     <ul>
       <li><strong>Languages:</strong> Python, SQL, MATLAB</li>
-      <li><strong>Frameworks & Libraries:</strong> NumPy, Pandas, Scikit‑learn, PyTorch, TensorFlow, OpenCV</li>
+      <li><strong>Frameworks &amp; Libraries:</strong> NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow, OpenCV</li>
       <li><strong>Tools:</strong> Git, Jupyter Notebook, Linux, Docker (basic)</li>
-      <li><strong>Data Types:</strong> Time‑series, medical signals, images, tabular data</li>
+      <li><strong>Data Types:</strong> Time-series, medical signals, images, tabular data</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>Research & Publications</h2>
+    <h2>Publications</h2>
     <p>
-      My research work includes peer‑reviewed publications in applied machine learning and
-      biomedical signal processing, with emphasis on model robustness, interpretability, and
-      real‑world deployment.
+      Full list on <a href="https://scholar.google.com/citations?user=SHPCjakAAAAJ&hl=en">Google Scholar</a>.
     </p>
+
+    <div class="note">
+      <b>Note:</b> Google Scholar blocks automated fetching on many networks, so this page
+      lists publications from a local file if you provide one. If you want the full list
+      to appear here automatically, export your publications from Google Scholar (BibTeX)
+      and generate <code>publications.json</code> (instructions in the comment below).
+    </div>
+
+    <!--
+      To show ALL publications here:
+
+      1) In Google Scholar, open your profile:
+         https://scholar.google.com/citations?user=SHPCjakAAAAJ&hl=en
+
+      2) Click "EXPORT" and download BibTeX (or copy BibTeX).
+
+      3) Save it as: publications.bib in the same repo folder as index.html
+
+      4) Run this Python script locally to generate publications.json:
+
+         python - <<'PY'
+         import json
+         from pathlib import Path
+         import bibtexparser
+
+         bib = Path("publications.bib").read_text(encoding="utf-8")
+         db = bibtexparser.loads(bib)
+
+         pubs = []
+         for e in db.entries:
+             title = e.get("title","").replace(",).replace(","").strip()
+             year = e.get("year","").strip()
+             authors = e.get("author","").replace("\n"," ").strip()
+             venue = e.get("journal") or e.get("booktitle") or e.get("publisher") or ""
+             venue = str(venue).replace(",).replace(","").strip()
+             url = e.get("url","").strip()
+             pubs.append({"title": title, "year": year, "authors": authors, "venue": venue, "url": url})
+
+         Path("publications.json").write_text(json.dumps(pubs, indent=2), encoding="utf-8")
+         print(f"Wrote {len(pubs)} publications to publications.json")
+         PY
+
+      5) Commit publications.json (and publications.bib if you want) to your repo.
+    -->
+
+    <ol id="pub-list">
+      <!-- Publications will load here from publications.json if available -->
+    </ol>
   </div>
+
+  <script>
+    // Load publications from publications.json (optional)
+    (async function () {
+      try {
+        const res = await fetch('publications.json', { cache: 'no-store' });
+        if (!res.ok) return;
+        const pubs = await res.json();
+        const ol = document.getElementById('pub-list');
+        if (!Array.isArray(pubs) || pubs.length === 0) return;
+
+        // Sort newest first when year exists
+        pubs.sort((a,b) => (parseInt(b.year||0,10) - parseInt(a.year||0,10)));
+
+        for (const p of pubs) {
+          const li = document.createElement('li');
+
+          const title = document.createElement('span');
+          title.textContent = p.title || 'Untitled';
+
+          const meta = [];
+          if (p.authors) meta.push(p.authors);
+          if (p.venue) meta.push(p.venue);
+          if (p.year) meta.push(p.year);
+
+          const metaSpan = document.createElement('div');
+          metaSpan.style.color = '#444';
+          metaSpan.style.fontSize = '14px';
+          metaSpan.textContent = meta.join(' · ');
+
+          if (p.url) {
+            const a = document.createElement('a');
+            a.href = p.url;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.appendChild(title);
+            li.appendChild(a);
+          } else {
+            li.appendChild(title);
+          }
+
+          li.appendChild(metaSpan);
+          ol.appendChild(li);
+        }
+      } catch (e) {
+        // no-op
+      }
+    })();
+  </script>
 
   <div class="footer">
     © 2025 Bitewulign Mekonnen
