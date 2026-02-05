@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111b2c"/>
+      <stop offset="1" stop-color="#0f1623"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7bdff2"/>
+      <stop offset="1" stop-color="#b2f7ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" rx="44" fill="url(#bg)"/>
+  <circle cx="240" cy="190" r="90" fill="url(#a)" opacity="0.95"/>
+  <path d="M120 410c26-78 80-118 120-118s94 40 120 118" fill="url(#a)" opacity="0.95"/>
+  <text x="240" y="452" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="18" fill="#a8b3c7">Add your photo → assets/img/profile.jpg</text>
+</svg>

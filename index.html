@@ -1,82 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitewulign Mekonnen, PhD | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      max-width: 950px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #111;
-    }
-    h1, h2, h3 { line-height: 1.3; }
-    h1 { font-size: 32px; margin-bottom: 6px; }
-    .subtitle { color: #555; margin-bottom: 14px; }
-    a { color: #0b57d0; text-decoration: none; font-weight: 600; }
-    a:hover { text-decoration: underline; }
-    .links a { margin-right: 12px; }
-    hr { border: none; border-top: 1px solid #ddd; margin: 26px 0; }
-    ul { margin-left: 20px; }
-    ol { margin-left: 22px; }
-    li { margin: 8px 0; }
-    .section { margin-bottom: 28px; }
-    .footer {
-      border-top: 1px solid #ddd;
-      margin-top: 40px;
-      padding-top: 15px;
-      font-size: 14px;
-      color: #666;
-    }
-    .hero {
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-    .avatar {
-      width: 130px;
-      height: 130px;
-      border-radius: 12px;
-      object-fit: cover;
-      border: 1px solid #e6e6e6;
-    }
-    .note {
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 12px 14px;
-      color: #444;
-      font-size: 14px;
-    }
-    @media (max-width: 560px) {
-      .hero { grid-template-columns: 1fr; }
-      .avatar { width: 110px; height: 110px; }
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+  <meta name="description" content="Academic portfolio: research, publications, experience, and contact." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <div class="hero">
-    <!-- Put bitewulign.jpg in the same folder as this index.html in your GitHub Pages repo -->
-    <img class="avatar" src="bitewulign.jpg" alt="Bitewulign Mekonnen portrait" />
-    <div>
-      <h1>Bitewulign Mekonnen, PhD</h1>
-      <div class="subtitle">
-        Data Scientist | Machine Learning & Deep Learning | Computer Vision | Signal &amp; Bio-image Processing<br>
-        Toronto, ON, Canada
-      </div>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="assets/img/logo.svg" alt="Your Name" height="32" />
+      </a>
 
-      <div class="links">
-        <a href="https://www.linkedin.com/in/bitewulign-mekonnen/">LinkedIn</a>
-        <a href="https://github.com/bitewulign">GitHub</a>
-        <a href="https://orcid.org/0000-0003-0962-5392">ORCID</a>
-        <a href="https://scholar.google.com/citations?user=SHPCjakAAAAJ&hl=en">Google Scholar</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/research.html">Research</a></li>
+        <li><a href="pages/experience.html">Experience</a></li>
+        <li><a href="pages/prospective.html">Prospective</a></li>
+        <li><a href="pages/lab.html">Lab</a></li>
+        <li><a href="pages/cv.html" class="pill">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Hi, this is</p>
+          <h1>Your Name</h1>
+          <p class="subtitle">DATA SCIENTIST · ML / COMPUTER VISION RESEARCHER</p>
+
+          <p class="lead">
+            I am a <strong>[Your Title]</strong> in <strong>[Your Department]</strong> at <strong>[Your Institution]</strong>. I build machine learning
+            methods for <strong>biomedical imaging</strong> and <strong>time-series signals</strong> (e.g., FF-OCT, PPG, NIR spectroscopy), with an
+            emphasis on robust modeling and practical deployment.
+          </p>
+
+          <p class="lead">
+            My work integrates experimentation, data engineering, and deep learning to deliver trustworthy systems for
+            healthcare applications.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn" href="pages/research.html">See research</a>
+            <a class="btn ghost" href="pages/about.html">More about me</a>
+          </div>
+
+          <p class="openings">
+            <strong>[Openings]</strong>: I’m happy to connect with collaborators and students interested in
+            <em>medical imaging, computer vision, and ML for health</em>. See <a href="pages/prospective.html">Prospective</a>.
+          </p>
+        </div>
+
+        <div class="card portrait" role="img" aria-label="Profile image">
+          <img src="assets/img/profile-placeholder.svg" alt="Portrait placeholder" />
+          <div class="portrait-links">
+            <a href="#" aria-label="Email">Email</a>
+            <a href="#" aria-label="Google Scholar">Scholar</a>
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Highlights</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Research</h3>
+            <p>ML for biomedical imaging (segmentation, enhancement), and physiological signals (PPG / NIR).</p>
+          </article>
+          <article class="card">
+            <h3>Engineering</h3>
+            <p>Python, SQL, cloud workflows, reproducible pipelines, and model evaluation at scale.</p>
+          </article>
+          <article class="card">
+            <h3>Impact</h3>
+            <p>Healthcare applications: decision support, monitoring, and computer-assisted diagnosis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Selected work</h2>
+        <p class="muted">Replace these placeholders with your papers/projects. Add PDF / code links if available.</p>
+
+        <div class="pub-list">
+          <article class="pub">
+            <div class="pub-thumb" aria-hidden="true"></div>
+            <div>
+              <h3>Project / Paper Title 1</h3>
+              <p class="pub-meta">Authors · Venue (Year)</p>
+              <p class="pub-desc">One sentence describing the contribution and why it matters.</p>
+              <p class="pub-links"><a href="#">PDF</a> · <a href="#">Code</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="pub-thumb" aria-hidden="true"></div>
+            <div>
+              <h3>Project / Paper Title 2</h3>
+              <p class="pub-meta">Authors · Venue (Year)</p>
+              <p class="pub-desc">One sentence describing the contribution and why it matters.</p>
+              <p class="pub-links"><a href="#">PDF</a> · <a href="#">Code</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="pub-thumb" aria-hidden="true"></div>
+            <div>
+              <h3>Project / Paper Title 3</h3>
+              <p class="pub-meta">Authors · Venue (Year)</p>
+              <p class="pub-desc">One sentence describing the contribution and why it matters.</p>
+              <p class="pub-links"><a href="#">PDF</a> · <a href="#">Code</a></p>
+            </div>
+          </article>
+        </div>
+
+        <div class="center">
+          <a class="btn ghost" href="pages/research.html">View all research</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>Copyright © <span id="year"></span> Your Name. All rights reserved.</p>
+      <a class="top" href="#top">Back to top ↑</a>
     </div>
+<<<<<<< HEAD
   </div>
 
   <hr>
@@ -232,6 +301,10 @@
   <div class="footer">
     © 2025 Bitewulign Mekonnen
   </div>
+=======
+  </footer>
+>>>>>>> 683ddcc (Profile updated)
 
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
