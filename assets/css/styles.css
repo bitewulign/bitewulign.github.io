@@ -199,3 +199,8 @@ a:hover{text-decoration:underline}
   .nav-menu.open{display:flex}
   .nav-menu a{padding:10px 12px}
 }
+
+.portrait-links a {
+  color: #1a73e8;   /* blue */
+  text-decoration: none;
+}  
