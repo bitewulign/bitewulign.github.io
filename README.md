@@ -12,7 +12,7 @@ This is a lightweight, responsive academic-style portfolio (multi-page) designed
 - Replace `Your Name` and placeholder text in:
   - `index.html`
   - `pages/about.html`
-  - - `pages/education.html`
+  - `pages/education.html`
   - `pages/research.html`
   - `pages/experience.html`
   - `pages/prospective.html`
