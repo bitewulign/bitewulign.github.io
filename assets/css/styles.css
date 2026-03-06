@@ -204,3 +204,67 @@ a:hover{text-decoration:underline}
   color: #1a73e8;   /* blue */
   text-decoration: none;
 }  
+
+#publications {
+  padding: 3rem 0;
+}
+
+#publications h2 {
+  margin-bottom: 1rem;
+}
+
+.pub-actions {
+  margin-bottom: 1.5rem;
+}
+
+.pub-btn {
+  display: inline-block;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.pub-btn:hover {
+  transform: translateY(-1px);
+}
+
+#bibtex_display .bibtexentry {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.publication-item {
+  line-height: 1.65;
+}
+
+.publication-title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  margin-bottom: 0.35rem;
+}
+
+.publication-authors {
+  margin-bottom: 0.3rem;
+}
+
+.publication-venue {
+  color: #555;
+  margin-bottom: 0.45rem;
+}
+
+.publication-links {
+  margin-top: 0.35rem;
+}
+
+.pub-link {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pub-link:hover {
+  text-decoration: underline;
+}

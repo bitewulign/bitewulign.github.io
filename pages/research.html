@@ -7,6 +7,8 @@
   <meta name="description" content="Research projects and selected publications." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  
+  <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@master/src/bibtex_js.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -111,7 +113,73 @@
       </article>
     </div>
 
-    <section class="block">
+    <section id="publications" class="section">
+  <div class="container">
+    <h2>Selected Publications</h2>
+
+    <p class="pub-actions">
+      <a href="publications.bib" download class="pub-btn">Download BibTeX</a>
+    </p>
+
+    <bibtex src="publications.bib"></bibtex>
+
+    <div class="bibtex_template" style="display:none;">
+      <div class="publication-item">
+        <div class="publication-title"></div>
+
+        <div class="publication-authors"></div>
+
+        <div class="publication-venue">
+          <span class="if journal">
+            <em><span class="journal"></span></em>
+          </span>
+          <span class="if booktitle">
+            <em><span class="booktitle"></span></em>
+          </span>
+          <span class="if volume">, <span class="volume"></span></span>
+          <span class="if pages">, <span class="pages"></span></span>
+          <span>, <span class="year"></span></span>
+        </div>
+
+        <div class="publication-links">
+          <a class="url pub-link" target="_blank" rel="noopener noreferrer">DOI</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="bibtex_display"></div>
+  </div>
+</section>
+
+<script>
+  function highlightMyName(authorText) {
+    return authorText.replace(/Bitewulign Kassa Mekonnen/g, '<strong>Bitewulign Kassa Mekonnen</strong>');
+  }
+
+  function formatPublicationTitles() {
+    const entries = document.querySelectorAll('.bibtexentry');
+    entries.forEach((entry) => {
+      const titleEl = entry.querySelector('.title');
+      const authorsEl = entry.querySelector('.author');
+      const pubTitleEl = entry.querySelector('.publication-title');
+      const pubAuthorsEl = entry.querySelector('.publication-authors');
+
+      if (titleEl && pubTitleEl) {
+        pubTitleEl.innerHTML = titleEl.textContent.trim();
+      }
+
+      if (authorsEl && pubAuthorsEl) {
+        pubAuthorsEl.innerHTML = highlightMyName(authorsEl.textContent.trim());
+      }
+    });
+  }
+
+  window.addEventListener('load', () => {
+    setTimeout(formatPublicationTitles, 500);
+  });
+</script>
+
+    <!-- <section class="block">
       <h2>Selected publications</h2>
       <ol class="pubs">
         <li><strong>Author</strong>, “Title,” <em>Venue</em>, Year. <a href="#">PDF</a></li>
@@ -119,7 +187,7 @@
         <li><strong>Author</strong>, “Title,” <em>Venue</em>, Year. <a href="#">PDF</a></li>
       </ol>
       <p class="muted">Tip: replace these placeholders with your real publications and links.</p>
-    </section>
+    </section> -->
   </main>
 
   <footer class="footer">

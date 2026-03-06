@@ -7,6 +7,9 @@
   <meta name="description" content="Academic portfolio: research, publications, experience, and contact." />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- BibTeX loader for publications -->
+  <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@master/src/bibtex_js.js"></script>
 </head>
 
 <body>
@@ -109,7 +112,33 @@
       </div>
     </section>
 
-    <section class="section alt">
+    <section id="publications">
+
+      <h2>Selected Papers</h2>
+
+      <bibtex src="publications.bib"></bibtex>
+
+      <div class="bibtex_template">
+
+      <div class="bibtexentry">
+
+      <span class="author"></span>.
+      <strong>"<span class="title"></span>"</strong>.
+
+      <span class="journal"></span>
+      <span class="booktitle"></span>
+
+      (<span class="year"></span>)
+
+      <a class="url">DOI</a>
+
+      </div>
+
+      </div>
+
+    </section>
+
+    <!-- <section class="section alt">
       <div class="container">
         <h2>Selected work</h2>
         <p class="muted">Replace these placeholders with your papers/projects. Add PDF / code links if available.</p>
@@ -145,7 +174,7 @@
             </div>
           </article>
         </div>
-
+ -->
         <div class="center">
           <a class="btn ghost" href="pages/research.html">View all research</a>
         </div>
