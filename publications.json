@@ -1,0 +1,41 @@
+[
+  {
+    "authors": "Bitewulign Kassa Mekonnen, Wei-Ru Lu, Tung-Han Hsieh, Justin Chu, Fu-Liang Yang",
+    "title": "Accurate and 30-plus days reliable cuffless blood pressure measurements with 9-minutes personal photoplethysmograph data and mixed deduction learning",
+    "venue": "Scientific Reports",
+    "volume": "14",
+    "pages": "23722",
+    "year": "2024",
+    "doi": "https://doi.org/10.1038/s41598-024-75583-y"
+  },
+  {
+    "authors": "Bitewulign Kassa Mekonnen, Tung-Han Hsieh, Dian-Fu Tsai, Shien-Kuei Liaw, Fu-Liang Yang, Sheng-Lung Huang",
+    "title": "Generation of Augmented Capillary Network Optical Coherence Tomography Image Data of Human Skin for Deep Learning and Capillary Segmentation",
+    "venue": "Diagnostics",
+    "volume": "11",
+    "year": "2021",
+    "doi": "https://doi.org/10.3390/diagnostics11040685"
+  },
+  {
+    "authors": "Bitewulign Kassa Mekonnen, Webb Yang, Tung-Han Hsieh, Shien-Kuei Liaw, Fu-Liang Yang",
+    "title": "Accurate prediction of glucose concentration and identification of major contributing features from hardly distinguishable near-infrared spectroscopy",
+    "venue": "Biomedical Signal Processing and Control",
+    "volume": "59",
+    "year": "2020",
+    "doi": "https://doi.org/10.1016/j.bspc.2020.101923"
+  },
+  {
+    "authors": "Bitewulign Kassa Mekonnen, Webb Yang, Tung-Han Hsieh, Shien-Kuei Liaw, Fu-Liang Yang",
+    "title": "Classification of Near-infrared Spectroscopic Glucose Concentrations Using Convolutional Neural Network",
+    "venue": "Opto-Electronics and Communications Conference (OECC)",
+    "year": "2020",
+    "doi": "https://doi.org/10.1109/OECC48412.2020.9273623"
+  },
+  {
+    "authors": "Bitewulign Kassa Mekonnen, Dian-Fu Tsai, Tung-Han Hsieh, Fu-Liang Yang, Shien-Kuei Liaw, Sheng-Lung Huang",
+    "title": "Deep Learning Approach for Red Blood Cell Segmentation from Full-Field OCT Data of Human Skin",
+    "venue": "IEEE International Conference on BioPhotonics",
+    "year": "2019",
+    "doi": "https://doi.org/10.1109/BioPhotonics.2019.8896748"
+  }
+]
