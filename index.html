@@ -10,6 +10,54 @@
 
   <!-- BibTeX loader for publications -->
   <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@master/src/bibtex_js.js"></script>
+
+  <style>
+    #publications h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #16355c;
+      margin-bottom: 0.75rem;
+    }
+
+    #publications .pub-divider {
+      border: none;
+      border-top: 2px solid #e5e5e5;
+      margin: 0 0 1.5rem 0;
+    }
+
+    #publications .bibtex_template {
+      counter-reset: pub-counter;
+    }
+
+    #publications .bib-entry {
+      counter-increment: pub-counter;
+      position: relative;
+      padding-left: 2.5rem;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #16355c;
+      margin-bottom: 1rem;
+    }
+
+    #publications .bib-entry::before {
+      content: counter(pub-counter) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 500;
+      color: #16355c;
+    }
+
+    #publications .bib-entry a {
+      color: #1a73e8;
+      text-decoration: none;
+      margin-left: 0.35rem;
+    }
+
+    #publications .bib-entry a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
@@ -70,7 +118,7 @@
           </div>
 
           <p class="openings">
-            <strong>[Openings]</strong>: I'm happy to connect with collaborators and students interested in
+            <strong>[Openings]</strong>: I’m happy to connect with collaborators and students interested in
             <em>medical imaging, computer vision, and ML for health</em>.
             See <a href="pages/prospective.html">Prospective</a>.
           </p>
@@ -84,7 +132,7 @@
             <a href="https://github.com/bitewulign" target="_blank" rel="noopener" aria-label="GitHub" style="color:#1a73e8;">GitHub</a>
             <a href="https://www.linkedin.com/in/bitewulign-mekonnen" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:#1a73e8;">LinkedIn</a>
             <a href="https://orcid.org/0000-0003-0962-5392" style="color:#1a73e8;">ORCID</a>
-            <a href="https://www.credly.com/users/bitewulign-kassa-mekonnen" target="_blank" rel="noopener" aria-label="Credly"  style="color:#1a73e8;">Credly</a>
+            <a href="https://www.credly.com/users/bitewulign-kassa-mekonnen" target="_blank" rel="noopener" aria-label="Credly" style="color:#1a73e8;">Credly</a>
           </div>
         </div>
       </div>
@@ -112,75 +160,29 @@
       </div>
     </section>
 
-    <!-- Enhanced Selected Papers Section -->
-    <section class="section alt" id="publications">
+    <section class="section" id="publications">
       <div class="container">
-        <h2>Selected Papers</h2>
-        <p class="muted">Recent publications in biomedical imaging, machine learning, and signal processing.</p>
+        <h2>Selected Publications</h2>
+        <hr class="pub-divider" />
 
-        <!-- BibTeX Integration -->
         <bibtex src="publications.bib"></bibtex>
-        
+
         <div class="bibtex_template">
-          <div class="bibtexentry pub">
-            <div class="pub-thumb" aria-hidden="true"></div>
-            <div>
-              <h3><span class="title"></span></h3>
-              <p class="pub-meta">
-                <span class="author"></span> · 
-                <span class="journal"></span><span class="booktitle"></span> 
-                (<span class="year"></span>)
-              </p>
-              <p class="pub-desc">
-                <!-- You can add abstracts or descriptions here if available in your BibTeX -->
-              </p>
-              <p class="pub-links">
-                <span class="if url">
-                  <a class="url" target="_blank" rel="noopener">PDF</a>
-                </span>
-                <span class="if doi">
-                  <a class="doi" target="_blank" rel="noopener">DOI</a>
-                </span>
-                <!-- Add more conditional links as needed -->
-              </p>
-            </div>
+          <div class="bib-entry">
+            <span class="author"></span>,
+            “<span class="title"></span>,”
+            <span class="if journal"><span class="journal"></span></span>
+            <span class="if booktitle"><span class="booktitle"></span></span>
+            <span class="if volume"> <span class="volume"></span></span>
+            <span class="if number">(<span class="number"></span>)</span>
+            <span class="if pages">, <span class="pages"></span></span>
+            (<span class="year"></span>).
+            <span class="if url"><a class="url" target="_blank" rel="noopener">Link</a></span>
+            <span class="if doi"><a class="doi" target="_blank" rel="noopener">DOI</a></span>
           </div>
         </div>
 
-        <!-- Fallback/Manual Publications (in case BibTeX doesn't load) -->
-        <div class="pub-list manual-pubs" style="display: none;">
-          <article class="pub">
-            <div class="pub-thumb" aria-hidden="true"></div>
-            <div>
-              <h3>Cuffless Blood Pressure Estimation Using Deep Learning on Photoplethysmographic Signals</h3>
-              <p class="pub-meta">B. K. Mekonnen, et al. · Biomedical Signal Processing and Control (2024)</p>
-              <p class="pub-desc">Novel deep learning approach for continuous blood pressure monitoring using PPG signals with improved accuracy.</p>
-              <p class="pub-links"><a href="#" target="_blank">PDF</a> · <a href="#" target="_blank">DOI</a></p>
-            </div>
-          </article>
-
-          <article class="pub">
-            <div class="pub-thumb" aria-hidden="true"></div>
-            <div>
-              <h3>Enhanced Medical Image Segmentation Using Attention-Based Deep Networks</h3>
-              <p class="pub-meta">B. K. Mekonnen, et al. · Medical Image Analysis (2023)</p>
-              <p class="pub-desc">Attention mechanisms for improved segmentation accuracy in biomedical imaging applications.</p>
-              <p class="pub-links"><a href="#" target="_blank">PDF</a> · <a href="#" target="_blank">Code</a> · <a href="#" target="_blank">DOI</a></p>
-            </div>
-          </article>
-
-          <article class="pub">
-            <div class="pub-thumb" aria-hidden="true"></div>
-            <div>
-              <h3>Time-Series Analysis of Physiological Signals for Health Monitoring</h3>
-              <p class="pub-meta">B. K. Mekonnen, et al. · IEEE Transactions on Biomedical Engineering (2023)</p>
-              <p class="pub-desc">Comprehensive framework for analyzing physiological time-series data in healthcare applications.</p>
-              <p class="pub-links"><a href="#" target="_blank">PDF</a> · <a href="#" target="_blank">DOI</a></p>
-            </div>
-          </article>
-        </div>
-
-        <div class="center">
+        <div class="center" style="margin-top: 2rem;">
           <a class="btn ghost" href="pages/research.html">View all publications</a>
         </div>
       </div>
@@ -243,10 +245,8 @@
   </footer>
 
   <script>
-    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
     const toggle = document.querySelector(".nav-toggle");
     const menu = document.getElementById("nav-menu");
 
@@ -257,16 +257,6 @@
         menu.classList.toggle("open");
       });
     }
-
-    // BibTeX fallback - show manual publications if BibTeX doesn't load
-    setTimeout(() => {
-      const bibtexEntries = document.querySelectorAll('.bibtexentry');
-      const manualPubs = document.querySelector('.manual-pubs');
-      
-      if (bibtexEntries.length === 0 && manualPubs) {
-        manualPubs.style.display = 'block';
-      }
-    }, 2000);
   </script>
 </body>
 </html>
