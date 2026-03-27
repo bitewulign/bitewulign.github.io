@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
-  <!-- BibTeX loader for publications -->
-  <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@master/src/bibtex_js.js"></script>
-
   <style>
     #publications h2 {
       font-size: 2.2rem;
@@ -25,7 +22,7 @@
       margin: 0 0 1.5rem 0;
     }
 
-    #publications .bibtex_template {
+    #publications-list {
       counter-reset: pub-counter;
     }
 
@@ -131,7 +128,7 @@
             <a href="https://scholar.google.com/citations?user=SHPCjakAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" style="color:#1a73e8;">Google Scholar</a>
             <a href="https://github.com/bitewulign" target="_blank" rel="noopener" aria-label="GitHub" style="color:#1a73e8;">GitHub</a>
             <a href="https://www.linkedin.com/in/bitewulign-mekonnen" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:#1a73e8;">LinkedIn</a>
-            <a href="https://orcid.org/0000-0003-0962-5392" style="color:#1a73e8;">ORCID</a>
+            <a href="https://orcid.org/0000-0003-0962-5392" target="_blank" rel="noopener" aria-label="ORCID" style="color:#1a73e8;">ORCID</a>
             <a href="https://www.credly.com/users/bitewulign-kassa-mekonnen" target="_blank" rel="noopener" aria-label="Credly" style="color:#1a73e8;">Credly</a>
           </div>
         </div>
@@ -165,22 +162,7 @@
         <h2>Selected Publications</h2>
         <hr class="pub-divider" />
 
-        <bibtex src="publications.bib"></bibtex>
-
-        <div class="bibtex_template">
-          <div class="bib-entry">
-            <span class="author"></span>,
-            “<span class="title"></span>,”
-            <span class="if journal"><span class="journal"></span></span>
-            <span class="if booktitle"><span class="booktitle"></span></span>
-            <span class="if volume"> <span class="volume"></span></span>
-            <span class="if number">(<span class="number"></span>)</span>
-            <span class="if pages">, <span class="pages"></span></span>
-            (<span class="year"></span>).
-            <span class="if url"><a class="url" target="_blank" rel="noopener">Link</a></span>
-            <span class="if doi"><a class="doi" target="_blank" rel="noopener">DOI</a></span>
-          </div>
-        </div>
+        <div id="publications-list"></div>
 
         <div class="center" style="margin-top: 2rem;">
           <a class="btn ghost" href="pages/research.html">View all publications</a>
@@ -257,6 +239,49 @@
         menu.classList.toggle("open");
       });
     }
+
+    async function loadPublications() {
+      const container = document.getElementById("publications-list");
+
+      try {
+        const response = await fetch("publications.json");
+        if (!response.ok) throw new Error("Failed to load publications.json");
+
+        const publications = await response.json();
+
+        container.innerHTML = publications.map((pub) => {
+          const authors = pub.authors || "";
+          const title = pub.title || "";
+          const venue = pub.journal || pub.booktitle || "";
+          const volume = pub.volume ? ` ${pub.volume}` : "";
+          const number = pub.number ? `(${pub.number})` : "";
+          const pages = pub.pages ? `, ${pub.pages}` : "";
+          const year = pub.year ? `(${pub.year})` : "";
+          const urlLink = pub.url
+            ? `<a href="${pub.url}" target="_blank" rel="noopener">Link</a>`
+            : "";
+          const doiLink = pub.doi
+            ? `<a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener">DOI</a>`
+            : "";
+
+          return `
+            <div class="bib-entry">
+              <span>${authors}</span>,
+              “<span>${title}</span>,”
+              <span>${venue}</span>${volume}${number}${pages}
+              ${year}.
+              ${urlLink}
+              ${doiLink}
+            </div>
+          `;
+        }).join("");
+      } catch (error) {
+        container.innerHTML = `<p style="color:red;">Unable to load publications.</p>`;
+        console.error(error);
+      }
+    }
+
+    loadPublications();
   </script>
 </body>
 </html>
