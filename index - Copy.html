@@ -70,7 +70,7 @@
           </div>
 
           <p class="openings">
-            <strong>[Openings]</strong>: I'm happy to connect with collaborators and students interested in
+            <strong>[Openings]</strong>: I’m happy to connect with collaborators and students interested in
             <em>medical imaging, computer vision, and ML for health</em>.
             See <a href="pages/prospective.html">Prospective</a>.
           </p>
@@ -112,76 +112,71 @@
       </div>
     </section>
 
-    <!-- Enhanced Selected Papers Section -->
-    <section class="section alt" id="publications">
+    <section id="publications">
+
+      <h2>Selected Papers</h2>
+
+      <bibtex src="publications.bib"></bibtex>
+
+      <div class="bibtex_template">
+
+      <div class="bibtexentry">
+
+      <span class="author"></span>.
+      <strong>"<span class="title"></span>"</strong>.
+
+      <span class="journal"></span>
+      <span class="booktitle"></span>
+
+      (<span class="year"></span>)
+
+      <a class="url">DOI</a>
+
+      </div>
+
+      </div>
+
+    </section>
+
+    <!-- <section class="section alt">
       <div class="container">
-        <h2>Selected Papers</h2>
-        <p class="muted">Recent publications in biomedical imaging, machine learning, and signal processing.</p>
+        <h2>Selected work</h2>
+        <p class="muted">Replace these placeholders with your papers/projects. Add PDF / code links if available.</p>
 
-        <!-- BibTeX Integration -->
-        <bibtex src="publications.bib"></bibtex>
-        
-        <div class="bibtex_template">
-          <div class="bibtexentry pub">
-            <div class="pub-thumb" aria-hidden="true"></div>
-            <div>
-              <h3><span class="title"></span></h3>
-              <p class="pub-meta">
-                <span class="author"></span> · 
-                <span class="journal"></span><span class="booktitle"></span> 
-                (<span class="year"></span>)
-              </p>
-              <p class="pub-desc">
-                <!-- You can add abstracts or descriptions here if available in your BibTeX -->
-              </p>
-              <p class="pub-links">
-                <span class="if url">
-                  <a class="url" target="_blank" rel="noopener">PDF</a>
-                </span>
-                <span class="if doi">
-                  <a class="doi" target="_blank" rel="noopener">DOI</a>
-                </span>
-                <!-- Add more conditional links as needed -->
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Fallback/Manual Publications (in case BibTeX doesn't load) -->
-        <div class="pub-list manual-pubs" style="display: none;">
+        <div class="pub-list">
           <article class="pub">
             <div class="pub-thumb" aria-hidden="true"></div>
             <div>
-              <h3>Cuffless Blood Pressure Estimation Using Deep Learning on Photoplethysmographic Signals</h3>
-              <p class="pub-meta">B. K. Mekonnen, et al. · Biomedical Signal Processing and Control (2024)</p>
-              <p class="pub-desc">Novel deep learning approach for continuous blood pressure monitoring using PPG signals with improved accuracy.</p>
-              <p class="pub-links"><a href="#" target="_blank">PDF</a> · <a href="#" target="_blank">DOI</a></p>
+              <h3>Project / Paper Title 1</h3>
+              <p class="pub-meta">Authors · Venue (Year)</p>
+              <p class="pub-desc">One sentence describing the contribution and why it matters.</p>
+              <p class="pub-links"><a href="#">PDF</a> · <a href="#">Code</a></p>
             </div>
           </article>
 
           <article class="pub">
             <div class="pub-thumb" aria-hidden="true"></div>
             <div>
-              <h3>Enhanced Medical Image Segmentation Using Attention-Based Deep Networks</h3>
-              <p class="pub-meta">B. K. Mekonnen, et al. · Medical Image Analysis (2023)</p>
-              <p class="pub-desc">Attention mechanisms for improved segmentation accuracy in biomedical imaging applications.</p>
-              <p class="pub-links"><a href="#" target="_blank">PDF</a> · <a href="#" target="_blank">Code</a> · <a href="#" target="_blank">DOI</a></p>
+              <h3>Project / Paper Title 2</h3>
+              <p class="pub-meta">Authors · Venue (Year)</p>
+              <p class="pub-desc">One sentence describing the contribution and why it matters.</p>
+              <p class="pub-links"><a href="#">PDF</a> · <a href="#">Code</a></p>
             </div>
           </article>
 
           <article class="pub">
             <div class="pub-thumb" aria-hidden="true"></div>
             <div>
-              <h3>Time-Series Analysis of Physiological Signals for Health Monitoring</h3>
-              <p class="pub-meta">B. K. Mekonnen, et al. · IEEE Transactions on Biomedical Engineering (2023)</p>
-              <p class="pub-desc">Comprehensive framework for analyzing physiological time-series data in healthcare applications.</p>
-              <p class="pub-links"><a href="#" target="_blank">PDF</a> · <a href="#" target="_blank">DOI</a></p>
+              <h3>Project / Paper Title 3</h3>
+              <p class="pub-meta">Authors · Venue (Year)</p>
+              <p class="pub-desc">One sentence describing the contribution and why it matters.</p>
+              <p class="pub-links"><a href="#">PDF</a> · <a href="#">Code</a></p>
             </div>
           </article>
         </div>
-
+ -->
         <div class="center">
-          <a class="btn ghost" href="pages/research.html">View all publications</a>
+          <a class="btn ghost" href="pages/research.html">View all research</a>
         </div>
       </div>
     </section>
@@ -257,16 +252,6 @@
         menu.classList.toggle("open");
       });
     }
-
-    // BibTeX fallback - show manual publications if BibTeX doesn't load
-    setTimeout(() => {
-      const bibtexEntries = document.querySelectorAll('.bibtexentry');
-      const manualPubs = document.querySelector('.manual-pubs');
-      
-      if (bibtexEntries.length === 0 && manualPubs) {
-        manualPubs.style.display = 'block';
-      }
-    }, 2000);
   </script>
 </body>
 </html>
